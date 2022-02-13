@@ -6,6 +6,13 @@ module.exports = {
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        './safelist.txt'
+    ],
+
+    safelist: [
+        {
+            pattern : /grid-cols-.*/
+        }
     ],
 
     theme: {
