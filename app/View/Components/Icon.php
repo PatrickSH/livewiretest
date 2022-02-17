@@ -4,22 +4,19 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Table extends Component
+class Icon extends Component
 {
 
-    public $headers;
-
-    public $dataPoints;
+    public $icon;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(array $headers, array $dataPoints)
+    public function __construct(string $icon)
     {
-        $this->headers = $headers;
-        $this->dataPoints = $dataPoints;
+        $this->icon = $icon;
     }
 
     /**
@@ -29,6 +26,6 @@ class Table extends Component
      */
     public function render()
     {
-        return view('components.table');
+        return view('components.icon');
     }
 }
