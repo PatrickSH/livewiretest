@@ -62,6 +62,7 @@ class StorePunchCard extends Component
         ]));
 
         $this->emit('showModal',null);
+        $this->emit('resetAndReloadTable');
 
         BrowserEvent::modal($this, ['title' => 'Punch card saved']);
     }

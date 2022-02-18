@@ -11,7 +11,11 @@
                 Create punch card
             </x-jet-button>
         </x-right-aligned-button>
-
-        <livewire:table></livewire:table>
+        <livewire:table tableClass="hej">
+            <x-slot name="actions">
+                <x-icon icon="edit" class="mr-2"></x-icon>
+                <x-icon icon="trash"></x-icon>
+            </x-slot>
+        </livewire:table>
     </x-slot>
 </x-app-layout>
