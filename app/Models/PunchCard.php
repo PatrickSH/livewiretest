@@ -13,4 +13,19 @@ class PunchCard extends Model
         'name', 'punch_duration', 'duration',
         'vat', 'price'
     ];
+
+
+    public function setPunchDurationAttribute($value) {
+        $hours = $value['hours'];
+        $minutes = $value['minutes'];
+
+        $this->attributes['punch_duration'] = ($hours > 0 ? $hours * 60 : 0) + $minutes;
+    }
+
+    public function setDurationAttribute($value) {
+        $hours = $value['hours'];
+        $minutes = $value['minutes'];
+
+        $this->attributes['duration'] = ($hours > 0 ? $hours * 60 : 0) + $minutes;
+    }
 }
